@@ -1,0 +1,3 @@
+class CarsStorage < ApplicationRecord
+
+end

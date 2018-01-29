@@ -1,0 +1,22 @@
+<%@storage_cars.each do |car|%>
+    <div class="row">
+      <a target="_blank" href="https://www.abw.by/car/sell/subaru/<%=car[:url]%>">
+        <div class="col-sm-12">
+          <h4><%= car[:title] %> <%= car[:price] %></h4>
+        </div>
+        <div class="col-sm-1">
+          <img style="	width: 100px;" src="<%=car[:image]%>" >
+        </div>
+        <div class="col-sm-10">
+          <div class="col-sm-12">
+            <%car[:element].each do |engine| %>
+                <%= " #{engine[0]} : #{engine[1]} |"%>
+            <%end%>
+          </div>
+        </div>
+      </a>
+    </div>
+<%end%>
+<div style="padding-top: 20px;"><%=@storage_cars.count%></div>
+
+
